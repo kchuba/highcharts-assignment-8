@@ -6,11 +6,44 @@
         <title>My first chart with Highcharts</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
         <script src="js/highcharts.js"></script>
+        <script src="js/themes/dark-unica.js"></script>
+
+
 </head>
 <body>
 
 <h1>My first chart with Highcharts</h1>
-<!-- add the div and the code below this comment -->
+<!-- add the div and the code below this comment! -->
+<div id= "container" style ="width:60%"; height:400px; ></div>
+
+<script>
+$(document).ready(function(){
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Fruit Consumption'
+        },
+        xAxis: {
+            categories: ['Blueberries','Apples', 'Bananas', 'Oranges', 'Mangoes']
+        },
+        yAxis: {
+            title: {
+                text: 'Fruit that was eaten last week'
+            }
+        },
+        series: [{
+            name: 'Tim',
+            data: [6, 1, 0, 4, 2]
+        }, {
+            name: 'Katie',
+            data: [6, 5, 7, 3, 0 ]
+        }]
+    });
+});
+
+</script>
 
 
 </body>
