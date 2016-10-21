@@ -1,0 +1,23 @@
+body {
+    background: #88C4CF;
+    margin: 50px;
+    font-size:110%;
+  }
+
+h1{
+  margin: 30px;
+  text-align: center;
+  font-family:sans-serif;
+}
+
+head{
+  margin:0;
+}
+
+article {
+  width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 10px 40px;
+
+}

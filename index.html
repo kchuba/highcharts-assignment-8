@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Social Media Use in the United States</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"> </script>
+        <script src="js/highcharts.js"></script>
+        <link href="styles/new.css" rel="stylesheet">
 
+</head>
+<body>
+<h1> Social Media Use in the United States </h1>
+<p>By Kirsten Chuba</p>
+
+<p> Within the last 10 years, social networks have rapidly transformed the world as we know it. Every year more and more American adults start using a form of social media; according to <a href="http://www.pewresearch.org/data-trend/media-and-technology/social-networking-use/">Pew Resource Center,</a> 76 percent of Internet-using adults use social networks as of 2015.  </p>
+
+<p>As shown by the charts below, social media use for all age groups increased from 2010 to 2015, and not just in the younger age groups: 67 percent of Internet users 50-64 use social media, as do 56 percent of those 65 and older as of 2015. There are also a diverse number of social networks available for use with something for everyone; according to the data, those with a high school education or lower tend to use MySpace and Facebook, while those with Bachelor's or graduate school degrees more frquently use LinkedIn and Twitter. <p/>
+
+<p>As use of these social networks increase across the board and new social networks are created, the world becomes more interconnected and information is shared more easily. </p>
+
+
+<article>
+<div id="container" style = "width: 80%; height = 500px"></div>
+
+<div id="second" style = "width: 80%; height = 500px;"></div>
+
+
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'bar'
+        },
+        title: {
+            text: 'Education Distribution by Social Networking Site Platform'
+        },
+        subtitle: {
+            text: 'Source: <a href="http://www.pewinternet.org/2011/06/16/part-2-who-are-social-networking-site-users/">PewInternet.org</a>'
+        },
+        xAxis: {
+            categories: ['MySpace', 'Facebook', 'LinkedIn', 'Twitter', 'Other'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            max: 100,
+            title: {
+                text: 'Percent',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        tooltip: {
+            valueSuffix: ' percent'
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -40,
+            y: 80,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+            shadow: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Less than high school',
+            data: [11, 5, 2, 6, 7]
+        }, {
+            name: 'High school',
+            data: [35, 26, 7, 16, 26]
+        }, {
+            name: 'Trade or some college',
+            data: [36, 34, 16, 39, 32]
+        }, {
+            name: "Bachelor's Degree",
+            data: [12, 20, 37, 21, 14]
+        }, {
+            name: 'Graduate school',
+            data: [6, 15, 38, 18, 11]
+        }]
+    });
+});
+</script>
+
+
+<script>
+$(function () {
+    $('#second').highcharts({
+      title: {
+           text: 'Social Media Use by Age',
+           x: -20 //center
+       },
+       subtitle: {
+           text: 'Source: <a href="http://www.pewresearch.org/data-trend/media-and-technology/social-networking-use/">PewResource.org</a>',
+           x: -20
+       },
+       xAxis: {
+           categories: ['2010', '2011', '2012', '2013', '2014', '2015']
+       },
+       yAxis: {
+           title: {
+               text: 'Percent (%)'
+           },
+           plotLines: [{
+               value: 0,
+               width: 1,
+               color: '#808080'
+           }]
+       },
+       tooltip: {
+           valueSuffix: '%'
+       },
+       legend: {
+           layout: 'vertical',
+           align: 'right',
+           verticalAlign: 'middle',
+           borderWidth: 0
+       },
+       series: [{
+           name: '18-29',
+           data: [86, 87, 92, 89, 89, 92 ]
+       }, {
+           name: '30-49',
+           data: [61, 68, 73, 78, 89, 91 ]
+       }, {
+           name: '50-64',
+           data: [47, 49, 57, 60, 65, 67]
+       }, {
+           name: '65+',
+           data: [26, 29, 38, 43, 49, 56]
+       }]
+   });
+});
+
+</script>
+</article>
+
+</body>
+</html>
