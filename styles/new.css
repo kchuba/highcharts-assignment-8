@@ -24,3 +24,13 @@ article {
   padding: 10px 40px;
 
 }
+
+#container{
+  width: 100%;
+  height: 500px;
+}
+
+#second{
+  width: 100%;
+  height: 500px;
+}
